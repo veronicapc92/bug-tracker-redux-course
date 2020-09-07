@@ -1,13 +1,9 @@
 import configureStore from "./store/configureStore";
-import { bugAdded, bugRemoved, bugResolved } from "./store/bugs";
-import { projectAdded } from "./store/projects";
+import { loadBugs, addBug, resolveBug, assignBugToUser } from "./store/bugs";
 
 const store = configureStore();
 
-store.dispatch(projectAdded({ name: "Project 1" }));
-
-store.dispatch(bugAdded({ description: "Bug 1" }));
-
-store.dispatch(bugResolved({ id: 1 }));
-
-store.dispatch(bugRemoved({ id: 1 }));
+store.dispatch(loadBugs());
+store.dispatch(addBug({ description: "a" }));
+store.dispatch(resolveBug(1));
+store.dispatch(assignBugToUser(1, 4));

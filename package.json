@@ -16,6 +16,9 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
-    "redux": "^4.0.5"
+    "axios": "^0.19.2",
+    "moment": "^2.27.0",
+    "redux": "^4.0.5",
+    "reselect": "^4.0.0"
   }
 }
